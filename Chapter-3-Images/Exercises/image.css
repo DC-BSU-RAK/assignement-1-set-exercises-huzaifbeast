@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #333;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #98bee3;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+  }
+  
+  .image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s ease;
+  }
+  
+  /* Image-specific filters */
+  .sea-image {
+    filter: saturate(0.5) contrast(1);
+  }
+  
+  .sea-image:hover {
+    filter: saturate(1.4) contrast(1.2) brightness(1.1);
+  }
+  
+  .mountain-image {
+    filter: contrast(0.5) brightness(1);
+  }
+  
+  .mountain-image:hover {
+    filter: contrast(1.2) brightness(1.1) saturate(1.1);
+  }
+  
+  .Rocks-image {
+    filter: sepia(0) saturate(0);
+  }
+  
+  .Rocks-image:hover {
+    filter: sepia(0) saturate(1.2) brightness(1.05);
+  }
+  
+  .image-info {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .image-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .image-info p {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .license-info {
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .gallery {
+      gap: 20px;
+    }
+    
+    .image-container {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Additional hover effects */
+  .image-container:hover img {
+    transform: scale(1.05);
+  } 
