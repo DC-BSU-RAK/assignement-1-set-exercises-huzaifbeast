@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <!-- This links our CSS file which controls the styling -->
+    <link rel="stylesheet" href="petrol.css">
+</head>
+<body>
+    <!-- This is the main container for our calculator -->
+    <div class="calculator-container">
+        <!-- Main heading -->
+        <h1>Petrol Calculator</h1>
+        
+        <!-- Form for user input -->
+        <form id="petrolForm">
+            <!-- First input field group -->
+            <div class="form-group">
+                <!-- Label explains what the input is for -->
+                <label for="pricePerLiter">Price per liter (£):</label>
+                <!-- Input field for price with default value 1.72 -->
+                <input 
+                    type="number" 
+                    id="pricePerLiter" 
+                    value="1.72" 
+                    min="0" 
+                    step="0.01"
+                >
+            </div>
+            
+            <!-- Second input field group -->
+            <div class="form-group">
+                <label for="liters">Liters purchased:</label>
+                <!-- Input field for liters with default value 0 -->
+                <input 
+                    type="number" 
+                    id="liters" 
+                    value="0" 
+                    min="0" 
+                    step="0.01"
+                >
+            </div>
+            
+            <!-- Button to calculate the total -->
+            <button type="button" id="calculateBtn">Calculate Total</button>
+        </form>
+        
+        <!-- Area to display the result -->
+        <div class="result">
+            <p>Total Cost: <span id="totalCost">£0.00</span></p>
+        </div>
+        
+        <!-- Footer with instructions -->
+        <div class="footer">
+            <p>Enter values and click "Calculate Total" to see the cost</p>
+        </div>
+    </div>
+
+    <!-- This links our JavaScript file which adds functionality -->
+    <script src="petrol.js"></script>
+</body>
+</html>
